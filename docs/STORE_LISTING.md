@@ -32,6 +32,30 @@ The extension is deliberately small:
 
 This extension is an independent project and is not affiliated with or endorsed by YouTube or Google.
 
+## Turkish listing (Türkçe)
+
+**Summary:** Daha Sonra İzle'deki bir video bitince YouTube'un sıradaki videoya geçmesini engeller; sayfada kalıp yorumları okuyabilirsin.
+
+**Detailed description:**
+
+YouTube'da Daha Sonra İzle listesindeki bir video bittiğinde YouTube hemen sıradakini açar. YouTube'un Otomatik oynatma düğmesi oynatma listelerinde işe yaramadığı için bunu kapatmanın bir ayarı yok.
+
+Watch Later Autoplay Stopper, bitirdiğin videoda kalmanı sağlar:
+
+- Yorumları oku, açıklamaya bak ya da biraz soluklan.
+- Hazır olduğunda oynatıcıdaki Sonraki düğmesine (ya da Shift+N) bas.
+- Varsayılan olarak Daha Sonra İzle'de çalışır; araç çubuğundaki pencereden "Tüm oynatma listeleri"ni seçebilirsin.
+- İstediğin an açıp kapatabilirsin.
+
+Eklenti bilerek küçük tutuldu:
+
+- Yalnızca youtube.com'da çalışır.
+- Reklam, analiz, takip ya da kendi ağ isteği yoktur.
+- Yalnızca iki ayarını saklar.
+- Tamamen açık kaynaktır: https://github.com/ibrahimcavdar/watch-later-autoplay-stopper
+
+Bu eklenti bağımsız bir projedir; YouTube veya Google ile bağlantılı değildir ve onlar tarafından desteklenmemektedir.
+
 ## Single purpose
 
 Prevent YouTube from automatically playing the next video when a video in the user's Watch Later playlist (or, if the user chooses, any playlist) ends.
