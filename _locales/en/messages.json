@@ -1,0 +1,23 @@
+{
+  "extName": {
+    "message": "Watch Later Autoplay Stopper"
+  },
+  "extDescription": {
+    "message": "Stops YouTube from jumping to the next video when a Watch Later video ends, so you can stay and read the comments."
+  },
+  "popupEnabled": {
+    "message": "Enabled"
+  },
+  "popupScopeLegend": {
+    "message": "Stop autoplay in"
+  },
+  "popupScopeWatchLater": {
+    "message": "Watch Later only"
+  },
+  "popupScopeAllPlaylists": {
+    "message": "All playlists"
+  },
+  "popupHint": {
+    "message": "When a video ends, you stay on it. Use the player's Next button to move on."
+  }
+}

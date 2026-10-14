@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="extName"></title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon32.png" alt="" width="20" height="20">
+    <h1 data-i18n="extName"></h1>
+  </header>
+
+  <label class="row toggle">
+    <span data-i18n="popupEnabled"></span>
+    <input type="checkbox" id="enabled" role="switch">
+  </label>
+
+  <fieldset id="scope">
+    <legend data-i18n="popupScopeLegend"></legend>
+    <label class="row">
+      <input type="radio" name="scope" value="watchLater">
+      <span data-i18n="popupScopeWatchLater"></span>
+    </label>
+    <label class="row">
+      <input type="radio" name="scope" value="allPlaylists">
+      <span data-i18n="popupScopeAllPlaylists"></span>
+    </label>
+  </fieldset>
+
+  <p class="hint" data-i18n="popupHint"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

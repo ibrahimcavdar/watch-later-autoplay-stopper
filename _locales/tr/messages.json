@@ -1,0 +1,23 @@
+{
+  "extName": {
+    "message": "Watch Later Autoplay Stopper"
+  },
+  "extDescription": {
+    "message": "Daha Sonra İzle'deki bir video bitince YouTube'un sıradaki videoya geçmesini engeller; sayfada kalıp yorumları okuyabilirsin."
+  },
+  "popupEnabled": {
+    "message": "Etkin"
+  },
+  "popupScopeLegend": {
+    "message": "Otomatik oynatmayı durdur"
+  },
+  "popupScopeWatchLater": {
+    "message": "Sadece Daha Sonra İzle"
+  },
+  "popupScopeAllPlaylists": {
+    "message": "Tüm oynatma listeleri"
+  },
+  "popupHint": {
+    "message": "Video bitince sayfada kalırsın. Sonrakine geçmek için oynatıcıdaki “Sonraki” düğmesini kullan."
+  }
+}
