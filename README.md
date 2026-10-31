@@ -14,8 +14,8 @@ With this extension, the video simply ends and you stay on it. When you're ready
 
 ## Install
 
-- **Chrome Web Store:** coming soon.
-- **Manually** (Chrome, Brave, Edge, and other Chromium browsers):
+- **[Chrome Web Store](https://chromewebstore.google.com/detail/watch-later-autoplay-stop/fcahikinfoeacblmmmcakkfojfgjplaa)** (works in Chrome, Brave, Edge, and other Chromium browsers).
+- **Manually**, from source:
   1. Download or clone this repository.
   2. Open `chrome://extensions` (or `brave://extensions`) and turn on **Developer mode**.
   3. Click **Load unpacked** and select the repository folder.
