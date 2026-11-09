@@ -4,7 +4,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-for file in src/bridge.js src/main.js popup/popup.js; do
+for file in src/bridge.js src/main.js popup/popup.js scripts/firefox-manifest.js; do
   node --check "$ROOT/$file"
 done
 

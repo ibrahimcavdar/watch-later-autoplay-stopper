@@ -6,6 +6,8 @@ const enabledBox = document.getElementById('enabled');
 const scopeSet = document.getElementById('scope');
 
 document.documentElement.lang = chrome.i18n.getUILanguage();
+// Firefox for Android shows the popup as a full page; see popup.css.
+document.documentElement.classList.toggle('mobile', /Android/.test(navigator.userAgent));
 for (const element of document.querySelectorAll('[data-i18n]')) {
   element.textContent = chrome.i18n.getMessage(element.dataset.i18n);
 }

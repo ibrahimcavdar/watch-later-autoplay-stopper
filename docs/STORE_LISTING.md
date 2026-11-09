@@ -1,6 +1,6 @@
 # Store Listing Draft
 
-Copy-ready text for the Chrome Web Store dashboard.
+Copy-ready text for the Chrome Web Store dashboard and, [further below](#firefox-add-ons-amo), for Firefox Add-ons.
 
 ## Product details
 
@@ -100,3 +100,52 @@ With a signed-in account, the same behavior applies to any video opened from htt
 | Screenshot 1 (1280×800) | `store-assets/screenshot-1.png` |
 | Screenshot 2 (1280×800) | `store-assets/screenshot-2.png` |
 | Small promo tile (440×280) | `store-assets/small-promo.png` |
+
+## Firefox Add-ons (AMO)
+
+Most fields reuse the Chrome text above. Only the differences are listed here.
+
+**Name:** Watch Later Autoplay Stopper
+
+**Add-on URL:** `https://addons.mozilla.org/firefox/addon/watch-later-autoplay-stopper/`
+
+**Summary** (max 250 characters): use the Chrome summary.
+
+**Description:** use the Chrome detailed description, with these two lines replaced:
+
+- Works on Watch Later by default; switch to "All playlists" from the extension's popup (on Android: ⋮ › Extensions).
+- Runs only on youtube.com, including the mobile site used by Firefox for Android.
+
+Turkish: same replacements in the Turkish text:
+
+- Varsayılan olarak Daha Sonra İzle'de çalışır; eklenti penceresinden (Android'de: ⋮ › Eklentiler) "Tüm oynatma listeleri"ni seçebilirsin.
+- Yalnızca youtube.com'da çalışır; Firefox for Android'in kullandığı mobil site de buna dahildir.
+
+**Compatibility:** Firefox and Firefox for Android.
+
+**Category:** Photos, Music & Videos.
+
+**Support website:** https://github.com/ibrahimcavdar/watch-later-autoplay-stopper/issues
+
+**License:** MIT License.
+
+**Privacy policy:** paste the text of [PRIVACY.md](../PRIVACY.md).
+
+**Data collection:** none. The manifest already declares `data_collection_permissions: { required: ["none"] }`, so Firefox shows "no data collected" at install.
+
+**Source code:** not required. The package contains the repository files as is, with no minification or build step.
+
+**Notes to reviewer:**
+
+> No build step: the package is the unminified source from https://github.com/ibrahimcavdar/watch-later-autoplay-stopper (the only generated file is manifest.json, produced by scripts/firefox-manifest.js). The extension makes no network requests and stores two settings in storage.sync.
+>
+> To test without a YouTube account:
+> 1. Open the extension popup and select "All playlists".
+> 2. Open https://www.youtube.com/watch?v=39h7ZJbRcsw&list=PLav47HAVZMjnTFVZL-aImCQIC0uLZtNCz&t=70s (a public Blender Studio playlist, 10 seconds before the end of the first video).
+> 3. Let the video finish. The page stays on it instead of opening video 2.
+> 4. Press the player's Next button. Video 2 opens normally.
+>
+> On Firefox for Android the same link opens m.youtube.com and behaves the same way.
+
+**Screenshots:** `store-assets/screenshot-1.png`, `store-assets/screenshot-2.png` (1280×800). The icon comes from the package.
+

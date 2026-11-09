@@ -130,3 +130,39 @@ legend {
   color: var(--muted);
   font-size: 12px;
 }
+
+/* Firefox for Android opens the popup as a full page: fill the screen and
+   use touch-sized text and targets. popup.js sets the class. */
+.mobile body {
+  width: auto;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.mobile h1 {
+  font-size: 18px;
+}
+
+.mobile header img {
+  width: 28px;
+  height: 28px;
+}
+
+.mobile .row {
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.mobile .toggle {
+  padding: 14px 0;
+}
+
+.mobile input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile legend,
+.mobile .hint {
+  font-size: 14px;
+}

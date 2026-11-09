@@ -11,7 +11,13 @@
 //   1. `canAutoAdvance_` reads as false while a target playlist is open.
 //   2. Autoplay `yt-navigate` events are swallowed before YouTube's router
 //      sees them.
-// If (1) can't be applied at all (YouTube renamed its internals), we also pause
+//
+// The mobile site (m.youtube.com, used by Firefox for Android) is a different
+// app: the player dispatches a bubbling `player-state-change` event, and a
+// window-level listener starts the next playlist video when `state` is 0
+// (ended). We stop that event at `document` so it never reaches window.
+//
+// If neither site's hook is in place (YouTube renamed its internals), we pause
 // the video just before it ends as a last resort.
 
 (() => {
@@ -95,6 +101,22 @@
     true
   );
 
+  // --- Mobile site: keep "video ended" from reaching the autoplay listener ---
+
+  const isMobileSite = location.hostname === 'm.youtube.com';
+  // Set once we see the player's state events, proving the mobile hook works.
+  let mobileHookLive = false;
+
+  if (isMobileSite) {
+    document.addEventListener('player-state-change', (event) => {
+      mobileHookLive = true;
+      if (event.detail?.state === 0 && shouldBlock()) {
+        event.stopPropagation();
+        log('Blocked an automatic jump to the next video.');
+      }
+    });
+  }
+
   // --- 3. Last resort: pause right before the end ---------------------------
 
   // Disarmed after we pause, so pressing play at the very end lets the video
@@ -106,7 +128,8 @@
     (event) => {
       const video = event.target;
       if (!(video instanceof HTMLVideoElement) || video.paused) return;
-      if (!shouldBlock() || managerPatched || ensurePatched()) return;
+      if (!shouldBlock() || mobileHookLive) return;
+      if (!isMobileSite && (managerPatched || ensurePatched())) return;
 
       const player = video.closest('#movie_player');
       if (!player || player.classList.contains('ad-showing')) return;

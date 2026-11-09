@@ -1,12 +1,12 @@
 # Privacy Policy
 
-Effective date: October 14, 2026
+Effective date: November 10, 2026
 
 Watch Later Autoplay Stopper is an open-source browser extension with one purpose: stopping YouTube from automatically playing the next video when a video in your Watch Later playlist (or, if you choose, any playlist) ends.
 
 ## Data handled
 
-The extension runs only on `https://www.youtube.com/*` and works entirely inside your browser:
+The extension runs only on `https://www.youtube.com/*` (and, in the Firefox version, the mobile site `https://m.youtube.com/*`) and works entirely inside your browser:
 
 - It reads the current page URL to check whether you are watching a video from a playlist.
 - It reads YouTube's in-page playlist state and the video player's playback position to prevent the automatic jump to the next video.
@@ -30,7 +30,7 @@ You can change the settings at any time from the extension's popup. Uninstalling
 
 ## Changes
 
-Material changes to data handling will be reflected in this policy and in the Chrome Web Store privacy disclosures before the changed extension is published.
+Material changes to data handling will be reflected in this policy and in the store privacy disclosures before the changed extension is published.
 
 ## Contact
 
